@@ -4,8 +4,34 @@
         <meta charset="UTF-8">
         <link href="bootstrap.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
-        <title>Startsida</title>
+        <title>Checkout</title>
     </head>
     <body>
+        <table class="show-cart">
+            <tr>
+                <th>Produkt</th>
+                <th>Beskrivning</th>
+                <th>Pris</th>
+            </tr>
+        </table>
+        <div id="form">
+            <form name="checkoutForm" action="/index.html" onsubmit="return validateForm()" method="get">
+                <label for="name">Namn:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="telephone">Telefon:</label><br>
+                <input type="text" id="telephone" name="telephone"><br>
+                <label for="email">Epost:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="address">Adress:</label><br>
+                <input type="text" id="address" name="address">
+                <label type="text"></label>
+                <input type="submit" value="Skicka">
+              </form>
+              <br>
+              <button id="homepage" onclick="document.location='index.html'">Tillbaka</button>
+        
+        </div>
+        <script src="jquery.js"></script>
+        <script src="cart.js"></script>
     </body>
 </html>

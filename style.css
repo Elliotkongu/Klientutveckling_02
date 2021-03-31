@@ -1,3 +1,45 @@
+table {
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+tr {
+    text-align: center;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    width: 200px;
+    border: 1px solid;
+}
+
+#form
+{
+    display: block;
+    text-align: center;
+}
+
+form
+{
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+    width: 30%;
+    padding: 1%;
+    border: 1px solid black;
+}
+
+form input {
+    width: 100%;
+}
+
+#homepage {
+    margin: 1%;
+}
+
 #product-wrapper {
     align-items: center;
     background: #FFF;
@@ -52,5 +94,4 @@
     margin: 0 0.5rem;
     padding-top: 0.5rem;
     text-align:left
-    
 }

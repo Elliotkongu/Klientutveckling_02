@@ -32,14 +32,11 @@ $(function() {
             <br>`;
 
         let button = document.createElement("button");
-        button.classList.add("btn");
-        button.classList.add("btn-primary");
-        button.setAttribute("data-id", `${product.id}`);
         button.setAttribute("onclick", "document.location='checkout.html'")
         button.textContent = "Beställ";
 
         button.addEventListener("click", function(e){
-            addToCart(product);
+            addItem(product);
         })
 
         productDescription.appendChild(button);
@@ -47,7 +44,7 @@ $(function() {
         return card;
     }
 
-    function addToCart(product) {
-        localStorage.setItem("cart", JSON.stringify(product));
+    function addItem(product) {
+        localStorage.setItem("item", JSON.stringify(product));
     }
 })
