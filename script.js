@@ -1,13 +1,11 @@
 $(function() {
 
-    loadProducts();
 
-    async function loadProducts() {
-        await fetch("https://webacademy.se/fakestore/")
-                .then(response => response.json())
-                .then(products => {displayProducts(products)})
-                .catch(error => console.error(error));
-    }
+        fetch("https://webacademy.se/fakestore/")
+            .then(response => response.json())
+            .then(products => displayProducts(products))
+            .catch(error => console.error(error));
+    
 
     function displayProducts(products) {
         let productContainer = document.getElementById("product-content");

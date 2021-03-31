@@ -31,14 +31,13 @@ function validateForm() {
     }
 
     let email = document.forms["checkoutForm"]["email"].value;
-    if (email === "" || /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+    if (email === "" || !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
         alert("Använd en fungerande epost-adress");
         return false;
     }
 
-    let lettersAndNumbers = /^[0-9a-zA-Z]+$/
     let address = document.forms["checkoutForm"]["address"].value;
-    if (address === "" || !address.match(lettersAndNumbers)) {
+    if (address === "") {
         alert("Måste skriva in en adress")
         return false;
     }
